@@ -77,7 +77,7 @@ The goal of this project is to build a predictive model for house prices in Beng
 4. Use the saved model for predictions.
 
 ```bash
-git clone https://github.com/yourusername/bengaluru-house-price-prediction.git
-cd bengaluru-house-price-prediction
+git clone https://github.com/panubhav2001/bengaluru-house-price.git
+cd bengaluru-house-price
 pip install -r requirements.txt
 python main.py
