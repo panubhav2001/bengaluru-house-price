@@ -73,11 +73,11 @@ The goal of this project is to build a predictive model for house prices in Beng
 
 1. Clone the repository.
 2. Ensure you have all dependencies installed.
-3. Run the data preprocessing and model training script.
+3. Run main.py script.
 4. Use the saved model for predictions.
 
 ```bash
 git clone https://github.com/yourusername/bengaluru-house-price-prediction.git
 cd bengaluru-house-price-prediction
 pip install -r requirements.txt
-python preprocess_and_train.py
+python main.py
