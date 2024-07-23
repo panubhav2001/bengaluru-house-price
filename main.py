@@ -6,7 +6,7 @@ import numpy as np
 app = Flask(__name__)
 
 data = pd.read_csv('Cleaned_data.csv')
-pipe = pickle.load(open('RandomForrest.pkl', 'rb'))
+pipe = pickle.load(open('RandomForrest_best.pkl', 'rb'))
 
 @app.route('/')
 def index():
