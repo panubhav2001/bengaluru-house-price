@@ -2,6 +2,7 @@ import pandas as pd
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
+import category_encoders as ce
 
 app = Flask(__name__)
 
@@ -21,7 +22,9 @@ def predict():
     sqft = request.form.get('sqft')
     print(location, bhk, bath, balcony, sqft)
     input = pd.DataFrame([[location,sqft,bath,balcony,bhk]],columns=['location', 'total_sqft', 'bath', 'balcony', 'bhk'])
-    prediction = pipe.predict(input)[0]*1e5
+    encoder = ce.BinaryEncoder(cols=['location'])
+    input_encoded = encoder.fit_transform(input)
+    prediction = pipe.predict(input_encoded)[0]*1e5
 
     return str(np.round(prediction,2))
 
